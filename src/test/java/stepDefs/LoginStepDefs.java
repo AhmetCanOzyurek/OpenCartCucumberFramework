@@ -9,9 +9,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import junit.framework.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.devtools.v85.network.model.LoadingFinished;
 
 import javax.xml.crypto.Data;
+import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
@@ -41,12 +43,11 @@ public class LoginStepDefs extends BaseSteps {
 
     @When("user fill the login form with the following datas")
     public void userFillTheLoginFormWithTheFollowingDatas(DataTable table) {
-        Map<String,String> map =table.asMap();
+        Map<String,String> map = table.asMap();
 
         sendKeys(loginObjects.loginFormUsername,map.get("username"));
 
         sendKeys(loginObjects.loginFormPassword, map.get("password"));
-        Assert.fail();
     }
 
     @And("user clicks login button")
@@ -63,6 +64,25 @@ public class LoginStepDefs extends BaseSteps {
     @Then("login should not be succesfull")
     public void loginShouldNotBeSuccesfull() {
         waitForVisibility(loginObjects.invalidWarning);
+    }
 
+
+    @When("user clicks the following links with text")
+    public void userClicksTheFollowingLinksWithText(DataTable table) {
+        String xpathOfLink = "//a[contains(., '%s')]";
+        List<String> list = table.asList();
+        for(String s : list){
+            By locator = By.xpath(String.format(xpathOfLink, s));
+            click(locator);
+        }
+    }
+
+    @Then("login should be {string}")
+    public void loginShouldBe(String status) {
+        if(status.equalsIgnoreCase("true")){
+            waitForVisibility(loginObjects.sideBarLogout);
+        }else{
+            waitForVisibility(loginObjects.invalidWarning);
+        }
     }
 }
