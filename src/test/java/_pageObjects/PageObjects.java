@@ -1,15 +1,13 @@
 package _pageObjects;
 
 import driver.Driver;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import stepDefs.LoginStepDefs;
 
-public class LoginObjects {
+public class PageObjects {
 
-    public LoginObjects(){
+    public PageObjects(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
     @FindBy(xpath = "//div[@id = 'top-links']//a[contains(.,'My Account')]")
@@ -27,4 +25,16 @@ public class LoginObjects {
     public WebElement sideBarLogout;
     @FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")
     public WebElement invalidWarning;
+
+    @FindBy(css = "#search input")
+    public WebElement eTopSerachBox;
+
+    @FindBy(css="#search button")
+    public WebElement eTopSearchSubmitButton;
+
+    @FindBy(css = "#search input")
+    public WebElement eSearchContainer;
+
+    @FindBy(css = "div.alert.alert-success")
+    public WebElement eSuccessAlert;
 }

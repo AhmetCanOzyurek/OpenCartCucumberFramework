@@ -1,27 +1,22 @@
 package stepDefs;
 
 import Readers.PropertyReader;
-import _pageObjects.LoginObjects;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import _pageObjects.PageObjects;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import junit.framework.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.devtools.v85.network.model.LoadingFinished;
 
-import javax.xml.crypto.Data;
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
 
 public class LoginStepDefs extends BaseSteps {
-    LoginObjects loginObjects;
+    PageObjects loginObjects;
     @Given("user on homepage")
     public void userOnHomepage() {
-        loginObjects = new LoginObjects();
+        loginObjects = new PageObjects();
         String url = PropertyReader.read().get("url");
         driver.get(url);
     }
@@ -84,5 +79,15 @@ public class LoginStepDefs extends BaseSteps {
         }else{
             waitForVisibility(loginObjects.invalidWarning);
         }
+    }
+
+    @When("user login with username {string} and password {string}")
+    public void userLoginWithUsernameAndPassword(String username, String password) {
+        click(loginObjects.menuMyAccountLink);
+        click(loginObjects.menuLoginLink);
+        waitForVisibility(loginObjects.loginFormUsername);
+        sendKeys(loginObjects.loginFormUsername,username);
+        sendKeys(loginObjects.loginFormPassword, password);
+        click(loginObjects.loginFormSubmitButton);
     }
 }

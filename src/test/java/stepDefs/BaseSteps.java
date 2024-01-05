@@ -1,6 +1,7 @@
 package stepDefs;
 
 import driver.Driver;
+import org.apache.poi.hssf.record.pivottable.StreamIDRecord;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -9,8 +10,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-
 
 public class BaseSteps {
     protected WebDriver driver;
@@ -18,7 +17,8 @@ public class BaseSteps {
 
     protected BaseSteps() {
         driver = Driver.getDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        //wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = Driver.getWait();
     }
 
     public void click(By locator) {
@@ -79,5 +79,28 @@ public class BaseSteps {
     public void waitForVisibility(WebElement elemenet) {
         wait.until(ExpectedConditions.visibilityOf(elemenet));
     }
+    public void waitForVisibility(By locator) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+    public static By getXpathOfButtonOfListedProduct(String text, String button){
+        int index = 3;
+        if(button.equalsIgnoreCase("wish")) index = 2;
+        if(button.equalsIgnoreCase("cart")) index = 1;
+        return By.xpath("//div[@class='product-thumb' and .//div[@class='caption' and .//*[contains(.,'" + text + "')]]]//button["+index+"]");
+    }  public static By getXpathOfButtonOfListedProduct(String text, int index){
 
+        return By.xpath("//div[@class='product-thumb' and .//div[@class='caption' and .//*[contains(.,'" + text + "')]]]//button["+index+"]");
+    }
+    public static By getXpathOfButtonOfListedProduct(String text, Buttons button){
+
+        int index = button.ordinal()+1;
+
+        return By.xpath("//div[@class='product-thumb' and .//div[@class='caption' and .//*[contains(.,'" + text + "')]]]//button["+index+"]");
+    }
+
+    public enum Buttons {
+        cart,
+        wish,
+        compare;
+    }
 }

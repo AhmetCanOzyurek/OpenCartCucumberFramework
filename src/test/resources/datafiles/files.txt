@@ -1,0 +1,19 @@
+
+fileName.feature
+       Gherkin dili ile yazilan scenario
+
+fileName.properties
+        key = value
+
+fileName.yaml
+
+
+fileName.xml
+
+fileName.json
+    JSON : Javascript Object Notaion
+    {
+        "key" : "value"
+        "key2" : "value2"
+    }
+
