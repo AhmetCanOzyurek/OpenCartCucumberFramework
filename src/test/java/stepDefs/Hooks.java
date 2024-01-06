@@ -1,6 +1,6 @@
 package stepDefs;
 
-import Readers.PropertyReader;
+import Readers.property.PropertyReader;
 import driver.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;

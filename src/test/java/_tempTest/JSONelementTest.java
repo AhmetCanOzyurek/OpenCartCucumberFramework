@@ -9,6 +9,8 @@ import stepDefs.BaseSteps;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
+import static utils.Utils.*;
+
 public class JSONelementTest extends BaseSteps {
 
     @Test
@@ -21,7 +23,6 @@ public class JSONelementTest extends BaseSteps {
         click(getBy("login","submitbutton"));
         waitForVisibility(getBy("account","sitemapaccount"));
     }
-
 
 
 
@@ -53,7 +54,7 @@ public class JSONelementTest extends BaseSteps {
          default : return null;
      }
  }
-    public static String getValue(String main, String key){
+/*    public static String getValue(String main, String key){
         String jsonFile = "src/test/resources/datafiles/Elements.json";
 
         JSONObject object = null;
@@ -65,5 +66,5 @@ public class JSONelementTest extends BaseSteps {
 
         JSONObject mainNode = (JSONObject) object.get(main);
         return mainNode.get(key).toString();
-    }
+    }*/
 }

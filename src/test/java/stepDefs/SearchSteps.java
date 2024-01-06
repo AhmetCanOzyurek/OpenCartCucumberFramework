@@ -17,9 +17,8 @@ public class SearchSteps extends BaseSteps{
         getXpathOfButtonOfListedProduct("iMac", Buttons.wish);
         getXpathOfButtonOfListedProduct("iMac", 2);
         getXpathOfButtonOfListedProduct("iMac", "wish");
-
-
     }
+
 
     @When("user add {string} to the wishList")
     public void userAddToTheWishList(String productName) {

@@ -1,6 +1,6 @@
 package stepDefs;
 
-import Readers.PropertyReader;
+import Readers.property.PropertyReader;
 import _pageObjects.PageObjects;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;

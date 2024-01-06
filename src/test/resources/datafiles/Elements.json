@@ -26,12 +26,43 @@
     "submitbutton": {
       "type": "xpath",
       "locator": "//input[@value='Login']"
+    },
+    "invalidwarning": {
+      "type": "xpath",
+      "locator": "//div[@class='alert alert-danger alert-dismissible']"
     }
   },
   "account": {
     "sitemapaccount": {
       "type": "xpath",
       "locator": "//ul[@class='breadcrumb']//a[.='Account']"
+    },
+    "sidebarlogout" :{
+      "type" : "xpath",
+      "locator" : "//aside[@id='column-right']//*[.='Logout']"
+    }
+  },
+  "search": {
+    "etopsearchbox": {
+      "type" : "xpath",
+      "locator":"//div[@id ='search']//input"
+    },
+    "etopsearchsubmitbutton":{
+      "type" : "xpath",
+      "locator" : "//div[@id ='search']//button"
+    },
+    "esearchcontainer": {
+      "type" : "xpath",
+      "locator" : "//div[@id ='content']"
+    },
+    "esuccesalert": {
+      "type": "xpath",
+      "locator": "//i[@class ='fa fa-check-circle']"
     }
   }
+
 }
+
+
+
+
