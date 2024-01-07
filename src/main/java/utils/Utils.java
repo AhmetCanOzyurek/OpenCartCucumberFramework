@@ -1,11 +1,14 @@
 package utils;
 
+import Readers.json.myJsonPojo;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 import org.openqa.selenium.By;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 
 public class Utils {
     public static By getBy(String main, String sub) {
@@ -47,5 +50,20 @@ public class Utils {
 
         JSONObject mainNode = (JSONObject) object.get(main);
         return mainNode.get(key).toString();
+    }
+
+    /**
+     * bu method okunacak .json dosyasini pojo.class'a map eder
+     * @param file okunacak json file
+     * @param pojo parent'i myJsonPojo olan pojo class'i
+     * @return Object olarak return eder, islem sirasinda sub class'a cast edilmeli
+     */
+    public static Object getPojo(String file, myJsonPojo pojo){
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            return mapper.readValue(new FileReader(file),pojo.getClass());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
