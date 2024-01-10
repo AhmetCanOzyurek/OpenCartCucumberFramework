@@ -1,10 +1,10 @@
 package Readers.excel;
 
-import org.apache.poi.ss.formula.functions.Column;
 import org.apache.poi.ss.usermodel.*;
 import org.testng.annotations.Test;
 
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +43,7 @@ public class ExcelTest {
         file = "src/test/resources/datafiles/ExcelB.xlsx";
         System.out.println(getRowValuesOf(file, "person", 1));
     }
+
     @Test
     public void getColValues1() {
         file = "src/test/resources/datafiles/ExcelB.xlsx";
@@ -51,6 +52,11 @@ public class ExcelTest {
         col.forEach(System.out::println);
     }
 
+    @Test
+    public void patchDatas(){
+        file = "src/test/resources/datafiles/ExcelB.xlsx";
+        patchData(file, "person","ahmet can ozyurek");
+    }
     public List<String> getRowValuesOf(String fileName, String page, int rowNumber) {
         try {
             fileInputStream = new FileInputStream(fileName);
@@ -60,8 +66,8 @@ public class ExcelTest {
             List<String> datas = new ArrayList<>();
             int lastRow = sheet.getPhysicalNumberOfRows();
 
-            
-            int index = Math.min(Math.max(0, rowNumber - 1),lastRow-1);
+
+            int index = Math.min(Math.max(0, rowNumber - 1), lastRow - 1);
             Row row = sheet.getRow(index);
 
             int numCells = row.getPhysicalNumberOfCells();
@@ -76,26 +82,84 @@ public class ExcelTest {
             throw new RuntimeException(e.getMessage());
         }
     }
-    public List<String> getColValuesOf(String fileName, String page,int columnNum) {
-        try{
+
+    public List<String> getColValuesOf(String fileName, String page, int columnNum) {
+        try {
             List<String> myList = new ArrayList<>();
             fileInputStream = new FileInputStream(fileName);
             workbook = WorkbookFactory.create(fileInputStream);
             sheet = workbook.getSheet(page);
-            int index = Math.max(0,columnNum-1);
+            int index = Math.max(0, columnNum - 1);
             int lastRow = sheet.getPhysicalNumberOfRows();
             for (int i = 0; i < lastRow; i++) {
                 Row row = sheet.getRow(i);
-                Cell cell = row.getCell(columnNum-1);
-                String val = cell == null ? "": cell.toString();
+                Cell cell = row.getCell(columnNum - 1);
+                String val = cell == null ? "" : cell.toString();
                 myList.add(val);
             }
             return myList;
-        }catch(Exception e){
+        } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
     }
 
+    public List<String> getColValuesOfByName(String fileName, String page, String columnName) {
+        try {
+            List<String> myList = new ArrayList<>();
+            fileInputStream = new FileInputStream(fileName);
+            workbook = WorkbookFactory.create(fileInputStream);
+            sheet = workbook.createSheet("sayfa1");
 
+            int lastRow = sheet.getPhysicalNumberOfRows();
+
+            Row row = sheet.getRow(0);
+            int indexOfColumn = -1;
+            for (int i = 0; i < row.getPhysicalNumberOfCells(); i++) {
+                if (row.getCell(i).toString().equalsIgnoreCase(columnName)) {
+                    indexOfColumn = i;
+                    break;
+                }
+            }
+            if (indexOfColumn < 0) {
+                throw new RuntimeException("column not found");
+            }
+            for (int i = 0; i < lastRow; i++) {
+                row = sheet.getRow(i);
+                Cell cell = row.getCell(indexOfColumn);
+                String val = cell == null ? "" : cell.toString();
+                myList.add(val);
+            }
+            return myList;
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
+    }
+
+    public void patchData(String file, String page, String data){
+        try {
+            List<String> myList = new ArrayList<>();
+            fileInputStream = new FileInputStream(file);
+            workbook = WorkbookFactory.create(fileInputStream);
+            sheet = workbook.getSheet(page);
+
+            int lastRow = sheet.getPhysicalNumberOfRows();
+
+            Row row = sheet.createRow(lastRow);
+
+            List<String> datas = new ArrayList<>(List.of(data.split("\\W")));
+
+            for (int i = 0; i < datas.size(); i++) {
+                row.createCell(i).setCellValue(datas.get(i));
+            }
+
+            FileOutputStream fileOutputStream = new FileOutputStream(file);
+
+            workbook.write(fileOutputStream);
+            workbook.close();
+            fileOutputStream.close();
+            fileInputStream.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e.getMessage());
+        }
+    }
 }
-

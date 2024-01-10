@@ -25,7 +25,10 @@ public class Hooks {
                 scenario.attach(screenshot, "image/png", scenario.getName());
             }
         }
+
     }
+
+
     @After(order = 0)
     public void after(){
 

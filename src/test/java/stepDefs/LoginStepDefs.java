@@ -50,7 +50,7 @@ public class LoginStepDefs extends BaseSteps {
         click(loginObjects.loginFormSubmitButton);
     }
 
-    @Then("login should be succesfull")
+    @Then("login should be successfull")
     public void loginShouldBeSuccesfull() {
         waitForVisibility(loginObjects.sideBarLogout);
     }

@@ -11,7 +11,7 @@ Feature: Login functionality
       | username | deneme@deneme.com |
       | password | deneme            |
     And   user clicks login button
-    Then  login should be succesfull
+    Then  login should be successfull
 
 
 
