@@ -1,5 +1,6 @@
 package Readers.json;
 
+import Readers.MyPojo;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -9,7 +10,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class ConfigPojo extends myJsonPojo{
+public class ConfigPojo extends MyPojo {
   private String url;
   private String username;
   private String password;

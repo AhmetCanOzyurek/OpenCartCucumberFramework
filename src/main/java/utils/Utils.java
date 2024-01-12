@@ -1,7 +1,8 @@
 package utils;
 
-import Readers.json.myJsonPojo;
+import Readers.MyPojo;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -69,10 +70,21 @@ public class Utils {
      * @param pojo parent'i myJsonPojo olan pojo class'i
      * @return Object olarak return eder, islem sirasinda sub class'a cast edilmeli
      */
-    public static Object getPojo(String file, myJsonPojo pojo) {
-        ObjectMapper mapper = new ObjectMapper();
+    public static MyPojo getPojo(String file, MyPojo pojo) {
+        String[] arr = file.split("[.]");
+        String fileType = arr[arr.length-1].toLowerCase();
         try {
-            return mapper.readValue(new FileReader(file), pojo.getClass());
+            switch (fileType){
+                case "json":
+                ObjectMapper mapperJson = new ObjectMapper();
+                return mapperJson.readValue(new FileReader(file), pojo.getClass());
+                case "yaml":
+                    ObjectMapper mapperYaml = new ObjectMapper(new YAMLFactory());
+                    return mapperYaml.readValue(new FileReader(file), pojo.getClass());
+                default:
+                    return null;
+            }
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

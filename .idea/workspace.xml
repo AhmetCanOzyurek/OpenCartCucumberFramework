@@ -4,25 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cf3af38-2e73-4493-8bc0-607dffe40dfe" name="Changes" comment="Write and read Excel datas with Apache Poi">
-      <change afterPath="$PROJECT_DIR$/ test-output/cucumber-reports/cucumber.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ test-output/cucumber-reports/cucumberReport.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Readers/TextFiles/TextFiles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/_tempTest/ExcelToFeature.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/runners/runnerExcell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/datafiles/myTextFile1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/datafiles/testCase.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-output/ExtentReport/HtmlReport.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-output/ExtentReport/SparkReport.html" afterDir="false" />
+    <list default="true" id="7cf3af38-2e73-4493-8bc0-607dffe40dfe" name="Changes" comment="Yaml Reader/Parallel test with runner">
+      <change afterPath="$PROJECT_DIR$/ cucumber-reports/cucumber.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ cucumber-reports/cucumber.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Readers/yaml/ConfigYaml.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Readers/yaml/TestYaml.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Readers/yaml/YamlReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/runners/RunnerParallel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/datafiles/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/xmlfiles/RunnerParallel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Readers/excel/ExcelReadWriteAppend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Readers/excel/ExcelReadWriteAppend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Readers/excel/ExcelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Readers/excel/ExcelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Readers/json/Config1Pojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Readers/json/Config1Pojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Readers/json/Config1PojoLombok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Readers/json/Config1PojoLombok.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Readers/json/ConfigPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Readers/json/ConfigPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Readers/json/TestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Readers/json/TestMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Readers/json/myJsonPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Readers/MyPojo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/LoginStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/LoginStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/datafiles/ExcelB.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/datafiles/ExcelB.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/datafiles/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/datafiles/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Login.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +34,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -51,57 +53,61 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.ExcelToFeature.executor": "Run",
-    "Application.JsonReaderClass.executor": "Run",
-    "Cucumber Java.Feature: Login.executor": "Run",
-    "Cucumber Java.Feature: Login2.executor": "Run",
-    "Cucumber Java.Feature: WishList.executor": "Run",
-    "Cucumber Java.Feature: testCaseFromExcel.executor": "Run",
-    "Cucumber Java.Scenario: login 2.executor": "Run",
-    "Cucumber Java.Scenario: login with invalid credentials.executor": "Run",
-    "Cucumber Java.Scenario: login with true credentials (1).executor": "Run",
-    "Cucumber Java.Scenario: login with true credentials.executor": "Run",
-    "Cucumber Java.Scenario: login2.executor": "Run",
-    "Cucumber Java.Scenario: wishlist TC 1.executor": "Run",
-    "Maven.B2CucumberFramework [clean].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG.ExcelReadWriteAppend.addDataToExcel.executor": "Run",
-    "TestNG.ExcelReadWriteAppend.writeNewExcelFile.executor": "Run",
-    "TestNG.ExcelTest.getColValues1.executor": "Run",
-    "TestNG.ExcelTest.getRowValues.executor": "Run",
-    "TestNG.ExcelTest.patchDatas.executor": "Run",
-    "TestNG.ExcelTest.read1.executor": "Run",
-    "TestNG.JSONelementTest.test1.executor": "Run",
-    "TestNG.TestExcelUtils.readExcel.executor": "Run",
-    "TestNG.TestMapper.testMapCOnfig1.executor": "Run",
-    "TestNG.TestMapper.testMapConfig1ombok.executor": "Run",
-    "TestNG.TestMapper.testMapConfigLombok.executor": "Run",
-    "TestNG.TestMapper.testMapGeneral1.executor": "Run",
-    "TestNG.TestMapper.testMapGeneral2.executor": "Run",
-    "TestNG.TestReadJson.executor": "Run",
-    "TestNG.TestReadJson.readConfig1.executor": "Run",
-    "TestNG.TestReadJson.readConfig2.executor": "Run",
-    "TestNG.TextFiles.createTextFile.executor": "Run",
-    "TestNG.TextFiles.executor": "Run",
-    "TestNG.TextFiles.readTextFile.executor": "Run",
-    "TestNG.TextFiles.writeTextFile.executor": "Run",
-    "TestNG.WishListScenarioWithJSON.LoginTest.executor": "Run",
-    "TestNG.WishListScenarioWithJSON.executor": "Run",
-    "TestNG.runnerExcell.executor": "Run",
-    "TestNG.runnerLogin.executor": "Run",
-    "TestNG.runnerWishList.executor": "Run",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/enesoncu/IdeaProjects/B2CucumberFramework/src/test/resources/datafiles",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.ExcelToFeature.executor&quot;: &quot;Run&quot;,
+    &quot;Application.JsonReaderClass.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: Login.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: Login2.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: WishList.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: testCaseFromExcel.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: login 2.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: login with invalid credentials.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: login with true credentials (1).executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: login with true credentials.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: login2.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: wishlist TC 1.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.B2CucumberFramework [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG./Users/enesoncu/IdeaProjects/B2CucumberFramework/src/test/resources/xmlfiles/RunnerParallel.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ExcelReadWriteAppend.addDataToExcel.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ExcelReadWriteAppend.writeNewExcelFile.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ExcelTest.getColValues1.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ExcelTest.getRowValues.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ExcelTest.patchDatas.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ExcelTest.read1.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.JSONelementTest.test1.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RunnerParallel.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TestExcelUtils.readExcel.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TestMapper.testMapCOnfig1.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TestMapper.testMapConfig1ombok.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TestMapper.testMapConfigLombok.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TestMapper.testMapGeneral1.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TestMapper.testMapGeneral2.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TestReadJson.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TestReadJson.readConfig1.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TestReadJson.readConfig2.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TestYaml.readYaml1.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TestYaml.readYaml2.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TextFiles.createTextFile.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TextFiles.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TextFiles.readTextFile.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TextFiles.writeTextFile.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WishListScenarioWithJSON.LoginTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WishListScenarioWithJSON.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.runnerExcell.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.runnerLogin.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.runnerWishList.executor&quot;: &quot;Run&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/enesoncu/IdeaProjects/B2CucumberFramework/src/test/resources/datafiles&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/resources/datafiles" />
@@ -110,6 +116,7 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/xmlfiles" />
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -118,79 +125,7 @@
       <recent name="_tempTest" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.runnerExcell">
-    <configuration name="ExcelToFeature" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_tempTest.ExcelToFeature" />
-      <module name="B2CucumberFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_tempTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Feature: testCaseFromExcel" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/testCaseFromExcel.feature" />
-      <option name="GLUE" value="stepDefs" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="B2CucumberFramework" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: testCaseFromExcel" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: login with true credentials (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Login.feature" />
-      <option name="GLUE" value="stepDefs" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="B2CucumberFramework" />
-      <option name="NAME_FILTER" value="^login with true credentials$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^login with true credentials$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: login with true credentials" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: login with true credentials" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/testCaseFromExcel.feature" />
-      <option name="GLUE" value="stepDefs" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="B2CucumberFramework" />
-      <option name="NAME_FILTER" value="^login with true credentials$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^login with true credentials$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: login with true credentials" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG./Users/enesoncu/IdeaProjects/B2CucumberFramework/src/test/resources/xmlfiles/RunnerParallel.xml">
     <configuration name="Scenario: " type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Login.feature" />
@@ -207,6 +142,69 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunnerParallel" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="B2CucumberFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="runners" />
+      <option name="MAIN_CLASS_NAME" value="runners.RunnerParallel" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestYaml.readYaml1" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="B2CucumberFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Readers.yaml.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Readers.yaml" />
+      <option name="MAIN_CLASS_NAME" value="Readers.yaml.TestYaml" />
+      <option name="METHOD_NAME" value="readYaml1" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestYaml.readYaml2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="B2CucumberFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Readers.yaml.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Readers.yaml" />
+      <option name="MAIN_CLASS_NAME" value="Readers.yaml.TestYaml" />
+      <option name="METHOD_NAME" value="readYaml2" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="/Users/enesoncu/IdeaProjects/B2CucumberFramework/src/test/resources/xmlfiles/RunnerParallel.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="B2CucumberFramework" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/xmlfiles/RunnerParallel.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -230,11 +228,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG./Users/enesoncu/IdeaProjects/B2CucumberFramework/src/test/resources/xmlfiles/RunnerParallel.xml" />
+        <item itemvalue="TestNG.RunnerParallel" />
+        <item itemvalue="TestNG.TestYaml.readYaml2" />
+        <item itemvalue="TestNG.TestYaml.readYaml1" />
         <item itemvalue="TestNG.runnerExcell" />
-        <item itemvalue="Cucumber Java.Scenario: login with true credentials (1)" />
-        <item itemvalue="Cucumber Java.Feature: testCaseFromExcel" />
-        <item itemvalue="Cucumber Java.Scenario: login with true credentials" />
-        <item itemvalue="Application.ExcelToFeature" />
       </list>
     </recent_temporary>
   </component>
@@ -295,7 +293,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704728267701</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Reading feature file from Excel/ read and write text files/ add data to excel sheet">
+      <option name="closed" value="true" />
+      <created>1704890408289</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1704890408289</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -303,7 +309,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="secando" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -318,6 +336,8 @@
     <MESSAGE value="Wish list Scenario with TestNG and JSON file/Reader." />
     <MESSAGE value="JSON configs, mapper and pojos added." />
     <MESSAGE value="Write and read Excel datas with Apache Poi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Write and read Excel datas with Apache Poi" />
+    <MESSAGE value="Reading feature file from Excel/ read and write text files/ add data to excel sheet" />
+    <MESSAGE value="Yaml Reader/Parallel test with runner" />
+    <option name="LAST_COMMIT_MESSAGE" value="Yaml Reader/Parallel test with runner" />
   </component>
 </project>
