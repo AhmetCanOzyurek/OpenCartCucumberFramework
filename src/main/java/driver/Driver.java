@@ -15,11 +15,19 @@ public class Driver extends driverFactory {
     private static WebDriver driver;
     private static ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
     private static ThreadLocal<WebDriverWait> waits = new ThreadLocal<>();
+    private static ThreadLocal<Browsers> browsers = new ThreadLocal<>();
     public static WebDriver getDriver() {
-        return getDriver(Browsers.CHROME);
+        if(browsers.get()==null)
+        browsers.set(Browsers.CHROME);
+
+        return getDriver(browsers.get());
     }
 
     public static WebDriver getDriver(Browsers browser) {
+//      if(browsers.get() == null)
+        // Cucumber @After'da Driver.quitDriver(); oldugundan her senaryo farkli bir browser ile run edilebilir
+        //Driver.quitDriver() yapilmamis ise browser degisse'de driver()==null olmadigi icin browser degismez
+        browsers.set(browser);
         //if(driver == null){
         if (drivers.get() == null){
             switch (browser) {

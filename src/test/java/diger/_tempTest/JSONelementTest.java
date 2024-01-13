@@ -1,4 +1,4 @@
-package _tempTest;
+package diger._tempTest;
 
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;

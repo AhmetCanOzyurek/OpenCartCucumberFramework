@@ -5,21 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cf3af38-2e73-4493-8bc0-607dffe40dfe" name="Changes" comment="Yaml Reader/Parallel test with runner">
-      <change afterPath="$PROJECT_DIR$/ cucumber-reports/cucumber.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ cucumber-reports/cucumber.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Readers/yaml/ConfigYaml.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Readers/yaml/TestYaml.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Readers/yaml/YamlReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/runners/RunnerParallel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/datafiles/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/xmlfiles/RunnerParallel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/diger/runOrder/BaseRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/diger/runOrder/MyHooks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/diger/runOrder/MyOrderStepdefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/diger/runOrder/MyRunnerForOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/diger/runOrder/RunOrder.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/diger/runOrder/TestNGAnnotations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/datafiles/_annotations" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ cucumber-reports/cucumber.html" beforeDir="false" afterPath="$PROJECT_DIR$/ cucumber-reports/cucumber.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ cucumber-reports/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/ cucumber-reports/cucumber.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ test-output/cucumber-reports/cucumber.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ test-output/cucumber-reports/cucumberReport.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Readers/json/Config1Pojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Readers/json/Config1Pojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Readers/json/Config1PojoLombok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Readers/json/Config1PojoLombok.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Readers/json/ConfigPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Readers/json/ConfigPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Readers/json/TestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Readers/json/TestMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Readers/json/myJsonPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Readers/MyPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/driver/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/driver/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/_tempTest/ExcelToFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/diger/_tempTest/ExcelToFeature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/_tempTest/JSONelementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/diger/_tempTest/JSONelementTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/_tempTest/JsonReaderClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/diger/_tempTest/JsonReaderClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/RunnerParallel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/RunnerParallel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/WishList.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/WishList.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/xmlfiles/RunnerParallel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/xmlfiles/RunnerParallel.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +36,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="secando" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -53,61 +60,62 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.ExcelToFeature.executor&quot;: &quot;Run&quot;,
-    &quot;Application.JsonReaderClass.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: Login.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: Login2.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: WishList.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: testCaseFromExcel.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: login 2.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: login with invalid credentials.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: login with true credentials (1).executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: login with true credentials.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: login2.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: wishlist TC 1.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.B2CucumberFramework [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TestNG./Users/enesoncu/IdeaProjects/B2CucumberFramework/src/test/resources/xmlfiles/RunnerParallel.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ExcelReadWriteAppend.addDataToExcel.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ExcelReadWriteAppend.writeNewExcelFile.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ExcelTest.getColValues1.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ExcelTest.getRowValues.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ExcelTest.patchDatas.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ExcelTest.read1.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.JSONelementTest.test1.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RunnerParallel.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TestExcelUtils.readExcel.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TestMapper.testMapCOnfig1.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TestMapper.testMapConfig1ombok.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TestMapper.testMapConfigLombok.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TestMapper.testMapGeneral1.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TestMapper.testMapGeneral2.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TestReadJson.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TestReadJson.readConfig1.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TestReadJson.readConfig2.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TestYaml.readYaml1.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TestYaml.readYaml2.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TextFiles.createTextFile.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TextFiles.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TextFiles.readTextFile.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TextFiles.writeTextFile.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.WishListScenarioWithJSON.LoginTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.WishListScenarioWithJSON.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.runnerExcell.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.runnerLogin.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.runnerWishList.executor&quot;: &quot;Run&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/enesoncu/IdeaProjects/B2CucumberFramework/src/test/resources/datafiles&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.ExcelToFeature.executor": "Run",
+    "Application.JsonReaderClass.executor": "Run",
+    "Cucumber Java.Feature: Login.executor": "Run",
+    "Cucumber Java.Feature: Login2.executor": "Run",
+    "Cucumber Java.Feature: WishList.executor": "Run",
+    "Cucumber Java.Feature: testCaseFromExcel.executor": "Run",
+    "Cucumber Java.Scenario: login 2.executor": "Run",
+    "Cucumber Java.Scenario: login with invalid credentials.executor": "Run",
+    "Cucumber Java.Scenario: login with true credentials (1).executor": "Run",
+    "Cucumber Java.Scenario: login with true credentials.executor": "Run",
+    "Cucumber Java.Scenario: login2.executor": "Run",
+    "Cucumber Java.Scenario: wishlist TC 1.executor": "Run",
+    "Maven.B2CucumberFramework [clean].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG./Users/enesoncu/IdeaProjects/B2CucumberFramework/src/test/resources/xmlfiles/RunnerParallel.xml.executor": "Run",
+    "TestNG.ExcelReadWriteAppend.addDataToExcel.executor": "Run",
+    "TestNG.ExcelReadWriteAppend.writeNewExcelFile.executor": "Run",
+    "TestNG.ExcelTest.getColValues1.executor": "Run",
+    "TestNG.ExcelTest.getRowValues.executor": "Run",
+    "TestNG.ExcelTest.patchDatas.executor": "Run",
+    "TestNG.ExcelTest.read1.executor": "Run",
+    "TestNG.JSONelementTest.test1.executor": "Run",
+    "TestNG.MyRunnerForOrder.executor": "Run",
+    "TestNG.RunnerParallel.executor": "Run",
+    "TestNG.TestExcelUtils.readExcel.executor": "Run",
+    "TestNG.TestMapper.testMapCOnfig1.executor": "Run",
+    "TestNG.TestMapper.testMapConfig1ombok.executor": "Run",
+    "TestNG.TestMapper.testMapConfigLombok.executor": "Run",
+    "TestNG.TestMapper.testMapGeneral1.executor": "Run",
+    "TestNG.TestMapper.testMapGeneral2.executor": "Run",
+    "TestNG.TestReadJson.executor": "Run",
+    "TestNG.TestReadJson.readConfig1.executor": "Run",
+    "TestNG.TestReadJson.readConfig2.executor": "Run",
+    "TestNG.TestYaml.readYaml1.executor": "Run",
+    "TestNG.TestYaml.readYaml2.executor": "Run",
+    "TestNG.TextFiles.createTextFile.executor": "Run",
+    "TestNG.TextFiles.executor": "Run",
+    "TestNG.TextFiles.readTextFile.executor": "Run",
+    "TestNG.TextFiles.writeTextFile.executor": "Run",
+    "TestNG.WishListScenarioWithJSON.LoginTest.executor": "Run",
+    "TestNG.WishListScenarioWithJSON.executor": "Run",
+    "TestNG.runnerExcell.executor": "Run",
+    "TestNG.runnerLogin.executor": "Run",
+    "TestNG.runnerWishList.executor": "Run",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/enesoncu/IdeaProjects/B2CucumberFramework/src/test/resources/datafiles",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/resources/datafiles" />
@@ -142,6 +150,23 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyRunnerForOrder" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="B2CucumberFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="diger.runOrder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="diger.runOrder" />
+      <option name="MAIN_CLASS_NAME" value="diger.runOrder.MyRunnerForOrder" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -209,30 +234,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="runnerExcell" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="B2CucumberFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="runners.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="runners" />
-      <option name="MAIN_CLASS_NAME" value="runners.runnerExcell" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG./Users/enesoncu/IdeaProjects/B2CucumberFramework/src/test/resources/xmlfiles/RunnerParallel.xml" />
+        <item itemvalue="TestNG.MyRunnerForOrder" />
         <item itemvalue="TestNG.RunnerParallel" />
         <item itemvalue="TestNG.TestYaml.readYaml2" />
         <item itemvalue="TestNG.TestYaml.readYaml1" />
-        <item itemvalue="TestNG.runnerExcell" />
       </list>
     </recent_temporary>
   </component>

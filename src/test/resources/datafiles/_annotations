@@ -1,0 +1,27 @@
+
+TestNG
+    @BeforeSuite
+        @BeforeTest
+            @BeforeClass
+                 @BeforeMethod
+
+                 @AfterMethod
+            @AfterClass
+        @AfterTest
+    @AfterSuite
+
+---------------------
+
+CUCUMBER Hooks
+    @BeforeAll                         //Static method olmali
+        @Before                        //scenario öncesi
+            @BeforeStep
+
+            @AfterStep
+        @After                         //scenario sonrasi
+    @AfterAll                          // static method olmali
+
+---------------------
+TestNG ile cucumber coordine eden Runnerr, @CucumberOptions ile
+
+Runner ile once TestNG , sonra Cucumber calisir, TestNG cucumber Feature'larini run ediyor
