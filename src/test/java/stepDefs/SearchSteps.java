@@ -20,7 +20,7 @@ public class SearchSteps extends BaseSteps{
     }
 
 
-    @When("user add {string} to the wishList")
+    @When("user add all {string} to the wishList")
     public void userAddToTheWishList(String productName) {
         click(getXpathOfButtonOfListedProduct(productName,Buttons.wish));
     }

@@ -10,6 +10,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javax.imageio.plugins.tiff.BaselineTIFFTagSet;
+
 
 public class BaseSteps {
     protected WebDriver driver;
@@ -102,5 +104,9 @@ public class BaseSteps {
         cart,
         wish,
         compare;
+    }
+
+    public void clickButtonOfListedProduct(String text, Buttons button){
+        click(getXpathOfButtonOfListedProduct(text,button));
     }
 }

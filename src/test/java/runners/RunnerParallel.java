@@ -12,7 +12,7 @@ import org.testng.annotations.Parameters;
 @CucumberOptions(
         //features = {"src/test/resources/features"}, //features altindaki tum feature dosyalarini run eder
         features = {"src/test/resources/features/Wishlist.feature" },
-        glue = {"stepDefs", "hooks"},
+        glue = {"stepDefs"},
         plugin = {"pretty",
                 "json: cucumber-reports/cucumber.json",  //cucumber json report
                 "html: cucumber-reports/cucumber.html",  //cucumber html report
