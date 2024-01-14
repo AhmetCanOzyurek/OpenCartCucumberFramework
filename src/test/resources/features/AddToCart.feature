@@ -3,17 +3,16 @@ Feature: Cart functionality
   Background: login with true credentials
     Given user on homepage
     When  user login with username "deneme@deneme.com" and password "deneme"
-    When  Clean the Cart
     Then  Cart should be empty
 
-
+@Tag
   Scenario: add a product
     Given user search for "iMac"
     When  user add "iMac" to the Cart
-    Then  success notification with "{string}" should be visible
+    Then  success notification with "Success" should be visible
     And   product "iMac" should be listed in Cart
 
-
+@tassag
   Scenario: add more products
     Given user search for "mac"
     When  user add all products to the Cart

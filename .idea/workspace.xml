@@ -4,21 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cf3af38-2e73-4493-8bc0-607dffe40dfe" name="Changes" comment="TestNG/Cucumber annotations/ ThreadLocal browsers">
-      <change afterPath="$PROJECT_DIR$/src/test/java/runners/RunnerAddToCart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefs/AddToCartStepDefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/AddToCart.feature" afterDir="false" />
+    <list default="true" id="7cf3af38-2e73-4493-8bc0-607dffe40dfe" name="Changes" comment="Add item to the cart scenario added with runner, on progress.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/diger/_tempTest/tempTest2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Menu.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ cucumber-reports/cucumber.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ cucumber-reports/cucumber.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ test-output/cucumber-reports/cucumber.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ test-output/cucumber-reports/cucumberReport.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/_pageObjects/PageObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/_pageObjects/PageObjects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/RunnerParallel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/RunnerParallel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/BaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/BaseSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/SearchSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/SearchSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/RunnerAddToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/RunnerAddToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/AddToCartStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/AddToCartStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/AddToCart.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/AddToCart.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/ExtentReport/HtmlReport.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/ExtentReport/SparkReport.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +103,7 @@
     &quot;TestNG.runnerExcell.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.runnerLogin.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.runnerWishList.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.tempTest2.hoverOverMenu.executor&quot;: &quot;Run&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/enesoncu/IdeaProjects/B2CucumberFramework/src/test/resources/datafiles&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
@@ -131,7 +129,7 @@
       <recent name="_tempTest" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RunnerAddToCart">
+  <component name="RunManager" selected="TestNG.tempTest2.hoverOverMenu">
     <configuration name="Feature: AddToCart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/AddToCart.feature" />
@@ -191,23 +189,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyRunnerForOrder" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="B2CucumberFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="diger.runOrder.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="diger.runOrder" />
-      <option name="MAIN_CLASS_NAME" value="diger.runOrder.MyRunnerForOrder" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RunnerAddToCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="B2CucumberFramework" />
       <extension name="coverage">
@@ -235,13 +216,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="tempTest2.hoverOverMenu" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="B2CucumberFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="diger._tempTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="diger._tempTest" />
+      <option name="MAIN_CLASS_NAME" value="diger._tempTest.tempTest2" />
+      <option name="METHOD_NAME" value="hoverOverMenu" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.tempTest2.hoverOverMenu" />
         <item itemvalue="TestNG.RunnerAddToCart" />
         <item itemvalue="Cucumber Java.Feature: AddToCart" />
         <item itemvalue="Cucumber Java.Scenario: add a product" />
         <item itemvalue="TestNG./Users/enesoncu/IdeaProjects/B2CucumberFramework/src/test/resources/xmlfiles/RunnerParallel.xml" />
-        <item itemvalue="TestNG.MyRunnerForOrder" />
       </list>
     </recent_temporary>
   </component>
@@ -318,7 +317,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705137326086</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add item to the cart scenario added with runner, on progress.">
+      <option name="closed" value="true" />
+      <created>1705243889795</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1705243889795</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -356,6 +363,8 @@
     <MESSAGE value="Reading feature file from Excel/ read and write text files/ add data to excel sheet" />
     <MESSAGE value="Yaml Reader/Parallel test with runner" />
     <MESSAGE value="TestNG/Cucumber annotations/ ThreadLocal browsers" />
-    <option name="LAST_COMMIT_MESSAGE" value="TestNG/Cucumber annotations/ ThreadLocal browsers" />
+    <MESSAGE value="Add item to the cart scenario added with runner." />
+    <MESSAGE value="Add item to the cart scenario added with runner, on progress." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add item to the cart scenario added with runner, on progress." />
   </component>
 </project>

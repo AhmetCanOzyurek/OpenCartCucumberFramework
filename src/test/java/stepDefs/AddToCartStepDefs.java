@@ -19,8 +19,10 @@ public class AddToCartStepDefs extends BaseSteps {
     @When("Clean the Cart")
     public void cleanTheCart() {
         click(pageObjects.eTopBarCart);
+        By emptyText = By.xpath("(//p[text()='Your shopping cart is empty!'])[2]");
+       waitForVisibility(emptyText);
         removeButtons = driver.findElements(By.xpath("//button[@data-original-title='Remove']"));
-        while (removeButtons.size()>0){
+        while (!removeButtons.isEmpty()){
             click(pageObjects.lRemoveButton);
             removeButtons =driver.findElements(By.xpath("//button[@data-original-title='Remove']"));
         }
@@ -35,10 +37,10 @@ public class AddToCartStepDefs extends BaseSteps {
 
     @When("user add {string} to the Cart")
     public void userAddToTheCart(String product) {
-//        clickButtonOfListedProduct(product,Buttons.cart);
-        WebElement productThumb = pageObjects.eListedProducts.stream().filter(e-> e.getText().contains(product)).collect(Collectors.toList()).get(0);
-        new Actions(driver).moveToElement(productThumb).perform();
-        productThumb.findElement(By.xpath("(//button)[1]")).click();
+        clickButtonOfListedProduct(product,Buttons.cart);
+//        WebElement productThumb = pageObjects.eListedProducts.stream().filter(e-> e.getText().contains(product)).collect(Collectors.toList()).get(0);
+//        new Actions(driver).moveToElement(productThumb).perform();
+//        productThumb.findElement(By.xpath("(//button)[1]")).click();
     }
 
     @Then("success notification with {string} should be visible")
