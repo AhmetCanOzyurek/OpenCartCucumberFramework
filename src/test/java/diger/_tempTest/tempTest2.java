@@ -3,6 +3,7 @@ package diger._tempTest;
 import Readers.property.PropertyReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.devtools.v85.page.Page;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import stepDefs.BaseSteps;
@@ -18,17 +19,19 @@ public class tempTest2 extends BaseSteps {
         driver.get(url);
         List<WebElement> menuElements = driver.findElements(mainMenu);
 
-        for (WebElement element : menuElements) {
+        for (int i = 0; i < menuElements.size(); i++) {
+            menuElements = driver.findElements(mainMenu);
+            new  Actions(driver).moveToElement(menuElements.get(i));
 
-            new Actions(driver).moveToElement(element).perform();
-            List<WebElement> subMenuElements = element.findElements(By.xpath(".//div//li"));
-            for (WebElement subMenuElement : subMenuElements) {
-                new Actions(driver).moveToElement(subMenuElement).click().perform();
-                driver.navigate().refresh();
-                waitForVisibility(element);
+            List<WebElement> subElements = menuElements.get(i).findElements(By.xpath(".//div//li"));
+
+            for (int j = 0; j < subElements.size(); j++) {
+                waitForVisibility(subElements.get(i));
                 menuElements = driver.findElements(mainMenu);
+                new  Actions(driver).moveToElement(menuElements.get(i));
+                subElements = menuElements.get(i).findElements(By.xpath(".//div//li"));
             }
-        }
-        driver.close();
+         }
+            driver.close();
     }
 }
