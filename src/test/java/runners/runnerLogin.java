@@ -6,11 +6,10 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = {"src/test/resources/features/Login2.feature"},
         glue = {"stepDefs"},
-        tags = "@login2",
+        tags = "@login1",
         plugin = { "pretty",
                 "json: test-output/cucumber-reports/cucumber.json",
-                "html: test-output/cucumber-reports/cucumberReport.html",
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+                "html: test-output/cucumber-reports/cucumberReport.html"}
 )
 public class runnerLogin extends AbstractTestNGCucumberTests {
 }
