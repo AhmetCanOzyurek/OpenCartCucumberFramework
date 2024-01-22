@@ -97,7 +97,7 @@
             <version>4.1.0</version>
         </dependency>
     </dependencies>
-    <build>
+<build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -105,13 +105,13 @@
                 <version>3.8.1</version> <!-- Use the latest version -->
                 <configuration>
                     <!-- Add any configuration specific to your project -->
-                        <includes>
-                            <!-- for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
-                            <include>**/runnerLogin.java</include>
-                        </includes>
-                        <testFailureIgnore>true</testFailureIgnore>
+                    <includes>
+                        <!-- for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
+                        <include>**/runnerLogin.java</include>
+                    </includes>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
 </project>
