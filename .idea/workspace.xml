@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cf3af38-2e73-4493-8bc0-607dffe40dfe" name="Changes" comment="runner updates and plugin for jenkins" />
+    <list default="true" id="7cf3af38-2e73-4493-8bc0-607dffe40dfe" name="Changes" comment="pom updates" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -347,7 +347,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705881039420</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="pom updates">
+      <option name="closed" value="true" />
+      <created>1705881746798</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1705881746798</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -389,6 +397,7 @@
     <MESSAGE value="Add item to the cart scenario added with runner, on progress." />
     <MESSAGE value="Hover over products menu on pages." />
     <MESSAGE value="runner updates and plugin for jenkins" />
-    <option name="LAST_COMMIT_MESSAGE" value="runner updates and plugin for jenkins" />
+    <MESSAGE value="pom updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="pom updates" />
   </component>
 </project>
