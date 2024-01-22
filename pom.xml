@@ -97,18 +97,22 @@
             <version>4.1.0</version>
         </dependency>
     </dependencies>
-<build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version> <!-- Use the latest version -->
+                <version>3.8.1</version>
                 <configuration>
-                    <!-- Add any configuration specific to your project -->
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <compilerArguments>
+                        <Xlint />
+                    </compilerArguments>
                     <includes>
-                        <!-- for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
-                        <include>**/runnerLogin.java</include>
-                    </includes>
+                    <!-- for  run class or classes  **/:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
+                    <include>**/runnerLogin.java</include>
+                </includes>
                 </configuration>
             </plugin>
         </plugins>
